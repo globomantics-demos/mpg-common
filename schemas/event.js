@@ -1,5 +1,9 @@
 function validateEvent(event) {
-  return typeof event.id === 'string';
+  if (typeof event.id !== 'string') {
+    return false;
+  }
+
+  return true;
 }
 
 module.exports = { validateEvent };
